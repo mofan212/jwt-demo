@@ -1,0 +1,18 @@
+server:
+  port: 8005
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jwt-demo?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+security:
+  jwt:
+    secret-key: bb99d8d33d0eb77786ba946e9b71322c6ee5d429f77cc424e1b0aa9b8a1e518a
+    # 单位毫秒，即 1 小时
+    expiration-time: 3600000
